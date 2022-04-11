@@ -11,13 +11,13 @@ output "aws_api_gateway_rest_api_id" {
 }
 
 output "aws_api_gateway_resource_main_id" {
-  description = "Blog API resource ID"
+  description = "api API resource ID"
 
-  value = aws_api_gateway_resource.blog.id
+  value = aws_api_gateway_resource.api.id
 }
 
-output "aws_api_gateway_resource_blog_id" {
-  description = "Blog API resource ID"
+output "aws_api_gateway_resource_api_id" {
+  description = "api API resource ID"
 
   value = aws_api_gateway_resource.get.id
 }

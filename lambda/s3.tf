@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "lambda_bucket" {
-  bucket        = "serverless-blog-functions"
+  bucket        = "serverless-api-functions"
   force_destroy = true
 }
 

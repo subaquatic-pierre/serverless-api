@@ -1,6 +1,6 @@
 resource "aws_api_gateway_rest_api" "main" {
-  name        = "ServerlessBlog"
-  description = "REST API for serverless blog application"
+  name        = "Serverless API"
+  description = "REST API for serverless application"
 }
 
 resource "aws_api_gateway_deployment" "main" {

@@ -8,6 +8,12 @@ variable "domain_name" {
   description = "Root Route53 domain name"
 }
 
+variable "tags" {
+  type        = map(string)
+  description = "Tags to be used in the project"
+}
+
+
 
 
 

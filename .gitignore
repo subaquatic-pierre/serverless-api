@@ -6,6 +6,8 @@
 
 **/functions.zip
 
+.terraform
+
 # .tfstate files
 *.tfstate
 *.tfstate.*

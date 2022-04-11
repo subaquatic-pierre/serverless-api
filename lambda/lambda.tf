@@ -1,8 +1,18 @@
 data "archive_file" "lambda_functions" {
   type = "zip"
 
-  source_dir  = "${path.module}/postmanager"
+  source_dir  = "${path.module}/handlers"
   output_path = "${path.module}/functions.zip"
+}
+
+resource "aws_lambda_function" "index" {
+  function_name    = "Index"
+  s3_bucket        = aws_s3_bucket.lambda_bucket.id
+  s3_key           = aws_s3_object.lambda_functions.key
+  runtime          = "python3.9"
+  handler          = "http_methods.index"
+  source_code_hash = data.archive_file.lambda_functions.output_base64sha256
+  role             = aws_iam_role.lambda_exec.arn
 }
 
 resource "aws_lambda_function" "list" {

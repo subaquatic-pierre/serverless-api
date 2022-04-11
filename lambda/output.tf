@@ -3,6 +3,9 @@ output "lambda_exec_iam_arn" {
 }
 
 # lambda invoke ARN
+output "lambda_index_invoke_arn" {
+  value = aws_lambda_function.index.invoke_arn
+}
 output "lambda_list_invoke_arn" {
   value = aws_lambda_function.list.invoke_arn
 }

@@ -1,6 +1,13 @@
+resource "aws_api_gateway_method" "index" {
+  rest_api_id   = aws_api_gateway_rest_api.main.id
+  resource_id   = aws_api_gateway_rest_api.main.root_resource_id
+  http_method   = "GET"
+  authorization = "NONE"
+}
+
 resource "aws_api_gateway_method" "list" {
   rest_api_id   = aws_api_gateway_rest_api.main.id
-  resource_id   = aws_api_gateway_resource.blog.id
+  resource_id   = aws_api_gateway_resource.api.id
   http_method   = "GET"
   authorization = "NONE"
 
@@ -11,7 +18,7 @@ resource "aws_api_gateway_method" "list" {
 
 resource "aws_api_gateway_method" "post" {
   rest_api_id   = aws_api_gateway_rest_api.main.id
-  resource_id   = aws_api_gateway_resource.blog.id
+  resource_id   = aws_api_gateway_resource.api.id
   http_method   = "POST"
   authorization = "NONE"
 }

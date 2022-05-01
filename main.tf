@@ -34,7 +34,7 @@ module "api" {
   tags                = var.tags
 
   # lambda invoke arns
-lambda_index_invoke_arn   = module.lambda.lambda_index_invoke_arn
+  lambda_index_invoke_arn   = module.lambda.lambda_index_invoke_arn
   lambda_list_invoke_arn   = module.lambda.lambda_list_invoke_arn
   lambda_get_invoke_arn    = module.lambda.lambda_get_invoke_arn
   lambda_put_invoke_arn    = module.lambda.lambda_put_invoke_arn
@@ -43,13 +43,7 @@ lambda_index_invoke_arn   = module.lambda.lambda_index_invoke_arn
   deployed_at              = timestamp()
 }
 
-module "content" {
-  source = "./content"
-
-  lambda_exec_iam_arn = module.lambda.lambda_exec_iam_arn
-}
-
-module "cors_main" {
+smodule "cors_main" {
   source  = "mewa/apigateway-cors/aws"
   version = "2.0.1"
 

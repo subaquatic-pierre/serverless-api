@@ -1,0 +1,10 @@
+aws_account_id = "00000000"
+domain_name  = "example.com"
+
+tags = {
+  "Name"        = "serverless-api",
+  "Project"     = "serverless-api"
+  "Environment" = "test"
+}
+
+

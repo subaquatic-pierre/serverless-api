@@ -6,13 +6,13 @@ The lambda handlers are defined in `lambda/handlers/http_methods.py`, these meth
 
 The response from the lambda method should use the format provided by `Response.format` class method.
 
-| ROUTE                    | METHOD | HANDLER             |
-| ------------------------ | ------ | ------------------- |
-| `/post`                  | GET    | http_methods.list   |
-| `/post`                  | POST   | http_methods.post   |
-| `/post/<string:post_id>` | GET    | http_methods.get    |
-| `/post/<string:post_id>` | PUT    | http_methods.put    |
-| `/post/<string:post_id>` | DELETE | http_methods.delete |
+| ROUTE                        | METHOD | HANDLER             |
+| ---------------------------- | ------ | ------------------- |
+| `/resource`                  | GET    | http_methods.list   |
+| `/resource`                  | POST   | http_methods.post   |
+| `/resource/<string:post_id>` | GET    | http_methods.get    |
+| `/resource/<string:post_id>` | PUT    | http_methods.put    |
+| `/resource/<string:post_id>` | DELETE | http_methods.delete |
 
 ## Cloud Diagram
 
@@ -33,3 +33,8 @@ The response from the lambda method should use the format provided by `Response.
   `terraform plan -out plan`
 - Run
   `terraform apply`
+
+## Notes
+
+- If terraform fails on first attempt try again, it may be terraform error in resource creation order
+- Wait a couple hours before trying to access the API, it may take time for DNS settings to propagate

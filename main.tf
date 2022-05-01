@@ -43,7 +43,7 @@ module "api" {
   deployed_at              = timestamp()
 }
 
-smodule "cors_main" {
+module "cors_main" {
   source  = "mewa/apigateway-cors/aws"
   version = "2.0.1"
 

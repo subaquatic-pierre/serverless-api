@@ -30,8 +30,11 @@ The response from the lambda method should use the format provided by `Response.
 - Update `terrafrom.tfvars.example` with your credentials
 - Rename `terrafrom.tfvars.example` to `terraform.tfvars`
 - Run
+
   `terraform plan -out plan`
+
 - Run
+
   `terraform apply`
 
 ## Notes

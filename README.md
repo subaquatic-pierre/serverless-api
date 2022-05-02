@@ -16,7 +16,7 @@ The response from the lambda method should use the format provided by `Response.
 
 ## Cloud Diagram
 
-![alt Cloud Diagram](https://github.com/subaquatic-pierre/serverless-api/blob/main/assets/cloud-diagram.png?raw=true))
+![alt Cloud Diagram](https://github.com/subaquatic-pierre/serverless-api/blob/main/assets/cloud-diagram.png?raw=true)
 
 ## Requirements
 
